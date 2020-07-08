@@ -375,7 +375,7 @@ int main() //The main function is the game itself and draws the playing board.
 	char* Xwin = "X's win!";
 	char* Owin = "O's win!";
 	int x_start, y_start;
-	
+
 	while(q == 1) //This loop runs continuously as long as the game is going. Once the player quits the game, this loop is broken.
 	{
 	clearscreen(); //It was important to include the clearscreen function here so that once a player restarts the game, the whole board would clear instead of just at the beginning of the first game.
@@ -404,7 +404,7 @@ int main() //The main function is the game itself and draws the playing board.
 		x_start = x_start + 1;
 		gamecount = gamecount + 1;
 	}
-	
+
 	x_start = 28;
 	y_start = 10;
 	while(*score)
@@ -413,7 +413,7 @@ int main() //The main function is the game itself and draws the playing board.
 		x_start = x_start + 1;
 		score = score + 1;
 	}
-	
+
 	games = games + 1; //Counts up everytime another game is played
 	int move, in, r1; //These variables are used for the player and computer moves.
 	int x = 1;
@@ -438,7 +438,7 @@ int main() //The main function is the game itself and draws the playing board.
 			{
 				break; //Checks to see if someone has won. If the player wins, the computer does not make a move after the winning move.
 			}
-			
+
 			r1 = rand() % 10; //This creates a random variable between 0 and 9. The square corresponding to that number is then checked to see if it is filled or not.
 			while(board[r1] != 2) //A 2 in this case represents an empty space. This is used because 0 represents o's and 1 represents x's.
 			{
